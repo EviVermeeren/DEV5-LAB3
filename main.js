@@ -27,11 +27,32 @@ class App {
         console.log(data);
         let hour = new Date().getHours();
         console.log(hour);
-        document.querySelector("#weather").innerHTML = data.hourly.rain[hour];
+
+        const cloudcover = data.hourly.cloudcover[hour];
+        const rain = data.hourly.rain[hour];
+
+        document.querySelector("#weather").innerHTML = rain;
+
+        if (rain > 1) {
+          document.body.style.background = "url('media/rain.jpg')";
+        } else if (cloudcover === 0) {
+          document.body.style.background = "url('media/sun.jpg')";
+        } else if (cloudcover >= 10 && cloudcover < 30) {
+          document.body.style.background = "url('media/smallcloud.jpg')";
+        } else if (cloudcover >= 30 && cloudcover < 70) {
+          document.body.style.background = "url('media/mediumcloud.jpg')";
+        } else if (cloudcover >= 70 && cloudcover <= 100) {
+          document.body.style.background = "url('media/fullcloud.jpg')";
+        }
+
+        document.body.style.backgroundRepeat = "no-repeat";
+        document.body.style.backgroundSize = "cover";
+        document.body.style.backgroundPosition = "center";
+        document.body.style.backgroundAttachment = "fixed";
+
         document.querySelector("#temp").innerHTML =
           data.hourly.temperature_2m[hour];
-        document.querySelector("#cloud").innerHTML =
-          data.hourly.cloudcover[hour];
+        document.querySelector("#cloud").innerHTML = cloudcover;
         document.querySelector("#uv").innerHTML = data.hourly.uv_index[hour];
       })
       .catch((err) => console.log(err));
