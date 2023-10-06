@@ -1,29 +1,55 @@
-body {
-  background-image: url("media/sun.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+#ad {
+  width: 300px;
+  height: 600px;
+  display: block;
+  margin: auto;
 }
 
 h1 {
-  font-family: "pf-reminder", sans-serif;
-  color: #000000;
-  font-size: 3rem;
-  text-align: center;
-  margin-top: 5rem;
-  margin-left: 20rem;
-  margin-right: 20rem;
+  font-family: "dolly-new", sans-serif;
   font-weight: 700;
-}
-
-h2 {
-  font-family: "pf-reminder", sans-serif;
-  color: #000000;
+  font-style: normal;
+  color: #0000a4;
   font-size: 2rem;
   text-align: center;
   margin-top: 5rem;
-  margin-left: 10rem;
-  margin-right: 10rem;
+  padding-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+h2 {
+  font-family: "graphik", arial, helvetica, sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 2rem;
   font-weight: 700;
+  margin-left: 1rem;
+  margin-right: 1rem;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 200px;
+  margin-top: 2rem;
+}
+
+h3 {
+  font-family: "produkt", arial, helvetica, sans-serif;
+  color: white;
+  font-size: 1.3rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  font-weight: 700;
+}
+
+#rain,
+#sun,
+#cold {
+  display: none;
 }

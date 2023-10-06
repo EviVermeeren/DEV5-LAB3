@@ -9,36 +9,45 @@
     <title>Weather app</title>
   </head>
   <body>
-    <div id="weather"></div>
-    <div id="temp"></div>
-    <div id="cloud"></div>
-    <div id="uv"></div>
+    <div id="ad">
+      <div id="weather"></div>
+      <div id="temp"></div>
 
-    <h1>
-      Welkom in de
-      welk-weer-is-het-vandaag-en-wat-moet-ik-weten-voor-ik-naar-buiten-ga-app!
-      🌞
-    </h1>
+      <h1>Klaar voor het weer?</h1>
 
-    <h2>
-      Het regent momenteel <span id="regen1">niet</span> dus je hebt
-      <span id="regen2">geen</span> paraplu nodig.
-    </h2>
+      <div id="rain">
+        <h3>Morgen regen, toch maar even een parapluutje bestellen?</h3>
+        <a
+          href="https://www.bol.com/be/nl/s/?page=1&searchtext=paraplu&view=list&filter_N=30640&N=15523&rating=all"
+          ><img
+            src="https://static.vecteezy.com/system/resources/previews/028/672/610/non_2x/umbrella-color-umbrella-color-umbrella-with-transparent-background-ai-generated-free-png.png"
+            alt="zonnecreme"
+        /></a>
+      </div>
 
-    <h2>
-      Er is momenteel <span id="bewolking1">geen</span> bewolking dus je hebt
-      <span id="bewolking2">een</span> zonnebril nodig.
-    </h2>
+      <div id="sun">
+        <h3>Veel zon morgen, misschien tijd voor een nieuwe zonnebril?</h3>
+        <a
+          href="https://www.bol.com/be/nl/s/?searchtext=zonnebril&suggestFragment=zonnebril"
+          ><img
+            src="https://pngfre.com/wp-content/uploads/sunglasses-png-from-pngfre-34.png"
+            alt="zonnecreme"
+        /></a>
+      </div>
 
-    <h2>
-      Het is momenteel <span id="temperatuur1">0</span> graden dus je hebt
-      <span id="temperatuur2">een</span> jas nodig.
-    </h2>
-
-    <h2>
-      De UV index is momenteel <span id="uv1">0</span> dus je hebt
-      <span id="uv2">geen</span> zonnebrand nodig.
-    </h2>
+      <div id="cold">
+        <h3 id="temp">
+          Brr, het wordt toch maar koud hé? Wat denk je van een nieuwe trui...
+        </h3>
+        <a href="https://www.bol.com/be/nl/s/?searchtext=trui"
+          ><img src="https://pngimg.com/d/sweater_PNG6.png" alt="zonnecreme"
+        /></a>
+      </div>
+      <h2>
+        Bol.com, voor 12 uur besteld, vanavond in huis voor het weertje van
+        morgen.
+      </h2>
+    </div>
 
     <script type="module" src="/main.js"></script>
   </body>
