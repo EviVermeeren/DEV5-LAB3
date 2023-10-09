@@ -75,35 +75,33 @@ class App {
     )
       .then((response) => response.json())
       .then((data) => {
-        console.log(data); // Log the entire movie data object
+        console.log(data);
 
-        // Access and process the movie data as needed
-        const firstMovie = data.results[0];
-        const movieTitle = firstMovie.title;
-        const moviedesc = firstMovie.overview;
+        data.results.forEach((movie, index) => {
+          const movieTitle = movie.title;
+          const moviedesc = movie.overview;
+          const backdropPath = movie.backdrop_path;
+          const movieId = movie.id; // Get the movie ID
 
-        document.querySelector("#movie").innerHTML = movieTitle;
-        document.querySelector("#dec1").innerHTML = moviedesc;
+          // Construct the TMDb movie URL using the ID
+          const movieUrl = `https://www.themoviedb.org/movie/${movieId}`;
 
-        const secondMovie = data.results[1];
-        const movieTitle2 = secondMovie.title;
+          // Create the movie title link
+          const movieTitleLink = document.createElement("a");
+          movieTitleLink.href = movieUrl;
+          movieTitleLink.textContent = movieTitle;
 
-        document.querySelector("#movie2").innerHTML = movieTitle2;
+          // Create the description paragraph
+          const descParagraph = document.createElement("p");
+          descParagraph.textContent = moviedesc;
 
-        const thirdMovie = data.results[2];
-        const movieTitle3 = thirdMovie.title;
+          // Find the container for this movie and append the elements
+          const containerId = `#movie${index + 1}`;
+          const movieContainer = document.querySelector(containerId);
 
-        document.querySelector("#movie3").innerHTML = movieTitle3;
-
-        const movie4 = data.results[3];
-        const movieTitle4 = movie4.title;
-
-        document.querySelector("#movie4").innerHTML = movieTitle4;
-
-        const movie5 = data.results[4];
-        const movieTitle5 = movie5.title;
-
-        document.querySelector("#movie5").innerHTML = movieTitle5;
+          movieContainer.appendChild(movieTitleLink);
+          movieContainer.appendChild(descParagraph);
+        });
       })
       .catch((err) => console.error(err));
   }

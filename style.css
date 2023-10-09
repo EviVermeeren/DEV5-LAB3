@@ -73,21 +73,25 @@ h3 {
   font-weight: 700;
 }
 
-#movie,
+#movie1,
 #movie2,
-#movie3,
-#movie4,
-#movie5 {
+#movie3 {
   font-family: "indivisible", sans-serif;
-  font-weight: 700;
+  font-weight: 100;
   font-style: normal;
-  color: #a40000;
   color: white;
-  font-size: 1rem;
+  font-size: 0.8rem;
   text-align: center;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+  font-family: "indivisible", sans-serif;
   font-weight: 700;
+  color: #a40000;
+  font-size: 1.2rem;
 }
 
 #rain,
