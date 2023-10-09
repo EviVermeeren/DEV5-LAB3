@@ -80,14 +80,30 @@ class App {
         // Access and process the movie data as needed
         const firstMovie = data.results[0];
         const movieTitle = firstMovie.title;
-        const movieOverview = firstMovie.overview;
-        const movieReleaseDate = firstMovie.release_date;
+        const moviedesc = firstMovie.overview;
 
-        console.log("Movie Title:", movieTitle);
-        console.log("Movie Overview:", movieOverview);
-        console.log("Release Date:", movieReleaseDate);
+        document.querySelector("#movie").innerHTML = movieTitle;
+        document.querySelector("#dec1").innerHTML = moviedesc;
 
-        // You can update your UI or perform any other actions with this data
+        const secondMovie = data.results[1];
+        const movieTitle2 = secondMovie.title;
+
+        document.querySelector("#movie2").innerHTML = movieTitle2;
+
+        const thirdMovie = data.results[2];
+        const movieTitle3 = thirdMovie.title;
+
+        document.querySelector("#movie3").innerHTML = movieTitle3;
+
+        const movie4 = data.results[3];
+        const movieTitle4 = movie4.title;
+
+        document.querySelector("#movie4").innerHTML = movieTitle4;
+
+        const movie5 = data.results[4];
+        const movieTitle5 = movie5.title;
+
+        document.querySelector("#movie5").innerHTML = movieTitle5;
       })
       .catch((err) => console.error(err));
   }
