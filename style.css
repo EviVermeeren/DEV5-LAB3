@@ -1,8 +1,9 @@
-#ad {
+.ad {
   width: 300px;
   height: 600px;
   display: block;
   margin: auto;
+  background-image: url("https://akm-img-a-in.tosshub.com/indiatoday/images/story/202012/Netflix-New-Feature-Audio-Only_1200x768.jpeg?size=1200:675");
 }
 
 h1 {
@@ -12,10 +13,20 @@ h1 {
   color: #0000a4;
   font-size: 2rem;
   text-align: center;
-  margin-top: 5rem;
-  padding-top: 1rem;
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+#netflixh1 {
+  font-family: "indivisible", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: #a40000;
+  font-size: 2rem;
+  text-align: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-top: 2rem;
 }
 
 h2 {
@@ -52,4 +63,8 @@ h3 {
 #sun,
 #cold {
   display: none;
+}
+
+#ad-container {
+  display: flex;
 }
